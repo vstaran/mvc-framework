@@ -4,5 +4,9 @@ ini_set('display_errors', '1');
 
 include $_SERVER['DOCUMENT_ROOT'] . '/../vendor/autoload.php';
 
-$app = new \framework\Application(new \framework\Components\Router\Router());
+$app = \framework\Application::getInstance();
+
+$config = include __DIR__ . '/../config/main.php';
+$app->configure($config);
+
 $app->run();

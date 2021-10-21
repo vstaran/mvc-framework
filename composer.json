@@ -10,11 +10,20 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "miroslav-lee/php-learning": "dev-routing",
+        "ext-yaml": "*"
+    },
     "autoload": {
         "psr-4": {
             "framework\\": "framework",
             "app\\": "app"
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "github",
+            "url": "git@github.com:miroslav-lee/php-advanced-learning.git"
+        }
+    ]
 }
