@@ -53,7 +53,8 @@ class Application implements RunnableInterface, ContainerInterface
             $action();
         } catch (\Throwable $exception) {
             http_response_code();
-            echo 'Not found';
+            echo $exception->getMessage();
+            echo '<br>Not found';
         }
     }
 

@@ -3,24 +3,14 @@
 
 namespace app\Controllers;
 
-
 use framework\Application;
-use Learning\MVC\Controller\ControllerInterface;
 
-class HomeController implements ControllerInterface
+class HomeController
 {
-    public function __construct()
+    public function index($data = [])
     {
-        $cache = Application::getInstance()->get('cache');
-        $cache->put('test', 'Hello world!!!!!!!');
-    }
+        print_r($data);
 
-    public function index()
-    {
-        $cache = Application::getInstance()->get('cache');
-        echo $cache->get('test');
-
-        $math = Application::getInstance()->get('math');
-        echo $math->sum(5, 8);
+        echo 'Home page';
     }
 }
